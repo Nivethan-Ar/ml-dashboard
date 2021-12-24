@@ -1,4 +1,5 @@
 import NavItem from './NavItem';
+import NavCardItem from './NavCardItem';
 import DashboardIcon from '../../../assets/icons/nav/latest/Dashboards.svg';
 import ManageIcon from '../../../assets/icons/nav/latest/Manage.svg';
 import OrderManageIcon
@@ -13,7 +14,8 @@ import ReportsIcon from '../../../assets/icons/nav/latest/Reports.svg';
 const Navigation = () => (
   <nav className="text-gray-500 ">
     <ul className="flex flex-col gap-6">
-      <NavItem link="/" icon={DashboardIcon} label="DashBoard" />
+      <NavCardItem link="/" />
+      <NavItem link="/home" icon={DashboardIcon} label="Home" />
       <NavItem link="/manage" icon={ManageIcon} label="Manage" />
       <NavItem link="/" icon={OrderManageIcon} label="Order" />
       <NavItem link="/" icon={RoutesIcon} label="Routes" />

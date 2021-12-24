@@ -1,6 +1,6 @@
 const Dashboard = () => (
   <div>
-    <h1>hello this is dashboard page</h1>
+    <h1> DASHBOARD page</h1>
   </div>
 );
 
