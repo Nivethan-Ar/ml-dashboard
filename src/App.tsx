@@ -1,16 +1,16 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import Layout from './components/Layout';
-import Dashboard from './pages/Dashboard';
-import Page1 from './pages/Page1';
+import Body from './layouts/Body';
+import Dashboard from './pages/DashboardML/Dashboard';
+import Manage from './pages/Manage/Manage';
 
 const App = () => (
   <BrowserRouter>
-    <Layout>
+    <Body>
       <Routes>
         <Route path="/" element={<Dashboard />} />
-        <Route path="/page1" element={<Page1 />} />
+        <Route path="/manage" element={<Manage />} />
       </Routes>
-    </Layout>
+    </Body>
   </BrowserRouter>
 );
 
