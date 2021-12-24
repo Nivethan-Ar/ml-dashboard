@@ -5,11 +5,10 @@ import Navigation from './Navigation';
 
 const Sidebar = () => (
 
-  <div className=" w-1/6">
-
+  <div className="w-56">
     <div
       style={{ backgroundColor: '#12162e' }}
-      className="fixed bg-blue-900 h-screen w-1/6 "
+      className="fixed h-screen w-56 "
     >
       <Branding />
       <Navigation />
