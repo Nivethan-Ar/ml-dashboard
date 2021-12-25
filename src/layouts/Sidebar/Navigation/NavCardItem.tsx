@@ -9,15 +9,16 @@ const NavCardItem = (props:any) => {
     <li>
       <Link to={link}>
         <div
-          style={{ backgroundColor: '#152042' }}
-          className="rounded-xl px-6 py-3 mx-3  text-white"
+          className="bg-[#152042] rounded-xl px-6 py-2 mx-3  text-white"
         >
-          <CardButton btnLabel="ALL NEW" />
-          <div className="flex mt-1 font-bold align-middle">
-            <div className="flex text-sm flex-col justify-center leading-5">
-              <h6 className="">Artificial</h6>
-              <h6 className="">Intelligence</h6>
-              <h6 className="">Dashboard</h6>
+          <div className="mb-[-8px]">
+            <CardButton btnLabel="ALL NEW" />
+          </div>
+          <div className="flex mt-0 font-bold align-top">
+            <div className="flex flex-col justify-center text-sm leading-5 tracking-wide">
+              <h6>Artificial</h6>
+              <h6>Intelligence</h6>
+              <h6>Dashboard</h6>
             </div>
             <img className="w-20" src={CardIcon} alt="" />
           </div>

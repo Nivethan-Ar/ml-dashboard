@@ -6,7 +6,7 @@ const Body = ({ children }:any) => (
     {/* <p>i&apos;m parent</p> */}
     <div className="flex">
       <Sidebar />
-      <div className="max-w-3xl">
+      <div>
         {children}
       </div>
     </div>
