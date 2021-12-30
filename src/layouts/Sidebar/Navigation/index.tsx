@@ -14,7 +14,7 @@ import ReportsIcon from '../../../assets/icons/nav/latest/Reports.svg';
 const Navigation = () => (
   <nav className="text-gray-500 ">
     <ul className="flex flex-col gap-6">
-      <NavCardItem link="/" />
+      <NavCardItem link="/dashboard" />
       <NavItem link="/home" icon={DashboardIcon} label="Home" />
       <NavItem link="/manage" icon={ManageIcon} label="Manage" />
       <NavItem link="/" icon={OrderManageIcon} label="Order" />
