@@ -1,8 +1,11 @@
 import React from 'react';
+import Body from '../../layouts/Body';
 
 const Manage = () => (
   <div>
-    <h1>manage page</h1>
+    <Body>
+      <h1>manage page</h1>
+    </Body>
   </div>
 );
 
