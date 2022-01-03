@@ -1,8 +1,9 @@
-import SearchIcon from '../../assets/icons/top-bar/search.svg';
+/* eslint-disable max-len */
 import CardButton from '../../components/CardButton';
 import WaveIcon from './wave.svg';
 import WaveIcon_2 from './wave-2.svg';
 import Body from '../../layouts/Body';
+import TopBar from '../../components/TopBar';
 
 const Dashboard = () => (
   <Body>
@@ -14,15 +15,7 @@ const Dashboard = () => (
       className="h-[140vh] flex flex-col gap-4 px-8 py-4 overflow-hidden text-white w-[calc(100vw_-_(14rem_+_14px))] "
     >
       {/* TOP BAR */}
-      <div className="">
-        <form action="" method="post">
-          <div className="relative flex items-center">
-            <img src={SearchIcon} className="w-4 ml-4 absolute pointer-events-none [filter:invert(1)]" alt="" />
-            <input type="text" className=" bg-[#12162e] pl-12 w-44 py-2 rounded-lg placeholder-slate-400 border-none tracking-wider text-xs outline-none text-white focus:ring-2 focus:ring-[#223262] " placeholder="Search" />
-          </div>
-        </form>
-
-      </div>
+      <TopBar />
 
       {/* TITLE */}
       <div className="">
@@ -40,7 +33,7 @@ const Dashboard = () => (
       </div>
 
       {/* CARDS */}
-      <main className="flex overflow-x-auto gap-8 ">
+      <main className="flex flex-wrap gap-8 ">
 
         <div className="grid flex-shrink-0 grid-cols-2  gap-2 w-fit p-6 tracking-wide bg-[#10172d] h-fit rounded-lg">
           <div>
@@ -72,10 +65,10 @@ const Dashboard = () => (
           </div>
         </div>
 
-        {/* reusable cards */}
+        {/* Reusable cards */}
         <div
           style={{ backgroundImage: `url(${WaveIcon})`, backgroundPosition: 'top 30px right' }}
-          className="bg-[#10172d] grid flex-shrink-0 tracking-wide rounded-lg w-64 p-6 tracking-wider"
+          className="bg-[#10172d] grid flex-shrink-0 tracking-wide rounded-lg w-64 p-6"
         >
           <div>
             <div className="text-sm">
@@ -94,7 +87,7 @@ const Dashboard = () => (
 
         <div
           style={{ backgroundImage: `url(${WaveIcon_2})`, backgroundPosition: 'top 30px right' }}
-          className="bg-[#10172d] grid flex-shrink-0 tracking-wide rounded-lg w-64 p-6 tracking-wider"
+          className="bg-[#10172d] grid flex-shrink-0 tracking-wide rounded-lg w-64 p-6"
         >
           <div>
             <div className="text-sm">
@@ -104,38 +97,6 @@ const Dashboard = () => (
               </h6>
             </div>
             <h6 className="font-medium">Productive Visits</h6>
-          </div>
-          <div className="place-self-end mb-2">
-            <CardButton btnLabel="view in detail" />
-          </div>
-        </div>
-
-        <div className="bg-[#10172d] grid flex-shrink-0 tracking-wide rounded-lg w-64 p-6 tracking-wider">
-          <div>
-            <div className="text-sm">
-              <h6>
-                <span className="text-blue-400">Estimated </span>
-                vs
-                <span className="text-green-400"> Achieved</span>
-              </h6>
-            </div>
-            <h6 className="font-medium">Productivity</h6>
-          </div>
-          <div className="place-self-end mb-2">
-            <CardButton btnLabel="view in detail" />
-          </div>
-        </div>
-
-        <div className="bg-[#10172d] grid flex-shrink-0 tracking-wide rounded-lg w-64 p-6 tracking-wider">
-          <div>
-            <div className="text-sm">
-              <h6>
-                <span className="text-blue-400">Estimated </span>
-                vs
-                <span className="text-green-400"> Achieved</span>
-              </h6>
-            </div>
-            <h6 className="font-medium">Productivity</h6>
           </div>
           <div className="place-self-end mb-2">
             <CardButton btnLabel="view in detail" />
