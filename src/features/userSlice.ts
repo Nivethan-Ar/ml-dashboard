@@ -1,6 +1,7 @@
 /* eslint-disable no-param-reassign */
 import { createSlice, Dispatch } from '@reduxjs/toolkit';
 import axios from 'axios';
+import jwt_decode from 'jwt-decode';
 
 const initialUser = localStorage.getItem('user')
   ? JSON.parse(localStorage.getItem('user') || '{}')
@@ -29,8 +30,6 @@ const { loginSuccess, logoutSuccess } = userSlice.actions;
 
 //
 export const login = (loginCredentials:any, callback:VoidFunction) => async (dispatch:Dispatch) => {
-  const { username } = loginCredentials;
-
   try {
     const res = await axios.post(
       'http://localhost:3000/auth/signin',
@@ -38,6 +37,8 @@ export const login = (loginCredentials:any, callback:VoidFunction) => async (dis
     );
 
     const { accessToken } = res.data;
+    const decoded:any = jwt_decode(accessToken);
+    const { username } = decoded;
 
     localStorage.setItem('jwtToken', accessToken); // remove this token when logout
 
