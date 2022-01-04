@@ -2,6 +2,7 @@
 import { createSlice, Dispatch } from '@reduxjs/toolkit';
 import axios from 'axios';
 import jwt_decode from 'jwt-decode';
+import setAuthToken from '../utils/setAuthToken';
 
 const initialUser = localStorage.getItem('user')
   ? JSON.parse(localStorage.getItem('user') || '{}')
@@ -21,12 +22,15 @@ export const userSlice = createSlice({
       state.user = null;
       localStorage.removeItem('user');
     },
+    tokenLogin: (state, action) => {
+      state.user = action.payload;
+    },
   },
 });
 
 export default userSlice.reducer;
 
-const { loginSuccess, logoutSuccess } = userSlice.actions;
+export const { loginSuccess, logoutSuccess, tokenLogin } = userSlice.actions;
 
 //
 export const login = (loginCredentials:any, callback:VoidFunction) => async (dispatch:Dispatch) => {
@@ -40,7 +44,8 @@ export const login = (loginCredentials:any, callback:VoidFunction) => async (dis
     const decoded:any = jwt_decode(accessToken);
     const { username } = decoded;
 
-    localStorage.setItem('jwtToken', accessToken); // remove this token when logout
+    setAuthToken(accessToken);
+    localStorage.setItem('jwtToken', accessToken);
 
     dispatch(loginSuccess({ username }));
 
