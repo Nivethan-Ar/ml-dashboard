@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable max-len */
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -5,6 +6,8 @@ import { Rootstate } from '../app/store';
 import { logout } from '../features/userSlice';
 import SearchIcon from '../assets/icons/top-bar/search.svg';
 import avatarIcon from '../assets/icons/top-bar/man.png';
+import BellIcon from '../assets/icons/top-bar/bell.png';
+import HelpIcon from '../assets/icons/top-bar/help.png';
 
 const TopBar = () => {
   const user = useSelector((state:Rootstate) => state.userAuth.user);
@@ -20,8 +23,14 @@ const TopBar = () => {
       </form>
 
       {user && (
-      <div className="">
+      <div className="cursor-pointer">
         <div className="flex gap-1">
+          <div className="flex items-center">
+
+            <img src={BellIcon} alt="" className="w-5 h-5 mr-6" />
+            <img src={HelpIcon} alt="" className="w-5 h-5 mr-5" />
+          </div>
+
           <img src={avatarIcon} alt="user" className="w-7" />
           {user.username}
           {/* <img src={logoutIcon} onClick={() => dispatch(logout())} alt="logout" className="w-7 h-7" /> */}
