@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import NavItem from './NavItem';
 import NavCardItem from './NavCardItem';
 import DashboardIcon from '../../../assets/icons/nav/latest/Dashboards.svg';
@@ -10,20 +11,23 @@ import TasksIcon from '../../../assets/icons/nav/latest/Tasks&Surveys.svg';
 import FundsIcon from '../../../assets/icons/nav/latest/Funds.svg';
 import CatalogueIcon from '../../../assets/icons/nav/latest/Catalogue.svg';
 import ReportsIcon from '../../../assets/icons/nav/latest/Reports.svg';
+import HappinessIcon from '../../../assets/icons/nav/latest/happiness.png';
+import MessageIcon from '../../../assets/icons/nav/latest/message.png';
 
 const Navigation = () => (
   <nav className="text-gray-500 ">
-    <ul className="flex flex-col gap-6">
+    <ul className="flex flex-col gap-7">
       <NavCardItem link="/dashboard" />
       <NavItem link="/home" icon={DashboardIcon} label="Home" />
-      <NavItem link="/manage" icon={ManageIcon} label="Manage" />
-      <NavItem link="/" icon={OrderManageIcon} label="Order" />
-      <NavItem link="/" icon={RoutesIcon} label="Routes" />
-      <NavItem link="/" icon={TasksIcon} label="Tasks" />
-      <NavItem link="/" icon={FundsIcon} label="Funds" />
+      <NavItem link="/" icon={HappinessIcon} label="Manage" />
+      <NavItem link="/" icon={OrderManageIcon} label="Products" />
+      <NavItem link="/" icon={ReportsIcon} label="Invoices" />
+      <NavItem link="/" icon={MessageIcon} label="Messages" />
+      <NavItem link="/" icon={TasksIcon} label="Calender" />
+      {/* <NavItem link="/" icon={FundsIcon} label="Funds" /> */}
       <NavItem link="/" icon={CustomersIcon} label="Customers" />
-      <NavItem link="/" icon={CatalogueIcon} label="Catalogue" />
-      <NavItem link="/" icon={ReportsIcon} label="Reports" />
+      {/* <NavItem link="/" icon={CatalogueIcon} label="Catalogue" /> */}
+      <NavItem link="/manage" icon={ManageIcon} label="Settings" />
 
     </ul>
   </nav>
