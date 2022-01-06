@@ -16,7 +16,7 @@ import MessageIcon from '../../../assets/icons/nav/latest/message.png';
 
 const Navigation = () => (
   <nav className="text-gray-500 ">
-    <ul className="flex flex-col gap-7">
+    <ul className="flex flex-col gap-8">
       <NavCardItem link="/dashboard" />
       <NavItem link="/home" icon={DashboardIcon} label="Home" />
       <NavItem link="/" icon={HappinessIcon} label="Manage" />
