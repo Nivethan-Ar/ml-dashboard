@@ -1,9 +1,14 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable max-len */
 import CardButton from '../../components/CardButton';
-import WaveIcon from './wave.svg';
-import WaveIcon_2 from './wave-2.svg';
 import Body from '../../layouts/Body';
 import TopBar from '../../components/TopBar';
+import ProductivityGraph from '../../components/graphs/ProductivityGraph';
+import productiveVisitsGraph from '../../components/graphs/productiveVisitsGraph';
+import GraphCard from '../../components/GraphCard';
+
+import WaveIcon_2 from './wave-2.svg';
+import WaveIcon from './wave.svg';
 
 const Dashboard = () => (
   <Body>
@@ -66,42 +71,18 @@ const Dashboard = () => (
         </div>
 
         {/* Reusable cards */}
-        <div
-          style={{ backgroundImage: `url(${WaveIcon})`, backgroundPosition: 'top 30px right' }}
-          className="bg-[#10172d] grid flex-shrink-0 tracking-wide rounded-lg w-64 p-6"
-        >
-          <div>
-            <div className="text-sm">
-              <h6>
-                <span className="text-blue-400">Estimated </span>
-                vs
-                <span className="text-green-400"> Achieved</span>
-              </h6>
-            </div>
-            <h6 className="font-medium">Productivity</h6>
-          </div>
-          <div className="place-self-end mb-2">
-            <CardButton btnLabel="view in detail" />
-          </div>
-        </div>
 
-        <div
-          style={{ backgroundImage: `url(${WaveIcon_2})`, backgroundPosition: 'top 30px right' }}
-          className="bg-[#10172d] grid flex-shrink-0 tracking-wide rounded-lg w-64 p-6"
-        >
-          <div>
-            <div className="text-sm">
-              <h6>
-                <span className="">Number of </span>
-                {/* <span className="text-green-400"></span> */}
-              </h6>
-            </div>
-            <h6 className="font-medium">Productive Visits</h6>
-          </div>
-          <div className="place-self-end mb-2">
-            <CardButton btnLabel="view in detail" />
-          </div>
-        </div>
+        <GraphCard
+          GraphComp={ProductivityGraph}
+          h1Type={1}
+          h2="Productivity"
+        />
+
+        <GraphCard
+          GraphComp={productiveVisitsGraph}
+          h1Type={2}
+          h2="Productive Visits"
+        />
 
       </main>
 
