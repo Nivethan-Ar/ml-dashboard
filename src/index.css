@@ -17,24 +17,25 @@ code {
     monospace;
 }
 
+/* Vertical scroll bar stylings */
+
 ::-webkit-scrollbar {
 	width: 14px;
 }
+
 ::-webkit-scrollbar-track {
   background-color: #132138;
-  /* backgroundImage: linear-gradient(315deg, #191d36 0%, #0f263e 64%), */
 
 }
+
 ::-webkit-scrollbar-thumb {
-	/* background-image: linear-gradient(to bottom left, rgba(32, 31, 31, 0.678), rgba(23, 18, 48, 0.863)); */
-  /* background-image: gray; */
   background-color: #1a4675;
 	background-clip: padding-box;
 	border-radius: 995px;
 	width: 6px;
 	border: 3px solid #0f263e;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-	/* background-image: var(--image-gradient); */
   background-color: #173963;
 }
