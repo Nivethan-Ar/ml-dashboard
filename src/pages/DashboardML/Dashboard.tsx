@@ -17,7 +17,7 @@ const Dashboard = () => (
         backgroundColor: '#7f53ac',
         backgroundImage: 'linear-gradient(315deg, #191d36 0%, #0f263e 64%)',
       }}
-      className="h-[140vh] flex flex-col gap-4 px-8 py-4 overflow-hidden text-white w-[calc(100vw_-_(12rem_+_14px))] "
+      className="h-[140vh] flex flex-col gap-6 px-8 py-4 overflow-hidden text-white w-[calc(100vw_-_(14rem_+_14px))] "
     >
       {/* TOP BAR */}
       <TopBar />
@@ -40,7 +40,7 @@ const Dashboard = () => (
       {/* CARDS */}
       <main className="flex flex-wrap gap-8 ">
 
-        <div className="grid flex-shrink-0 grid-cols-2  gap-2 w-fit p-6 tracking-wide bg-[#10172d] h-fit rounded-lg">
+        <div className="grid relative flex-shrink-0 grid-cols-2  gap-2 w-fit p-6 tracking-wide bg-[#10172d] h-fit rounded-lg">
           <div>
             <h6 className="text-xs">This Week&apos;s</h6>
             <h6 className="font-medium">Productivity Score</h6>
@@ -65,7 +65,9 @@ const Dashboard = () => (
               70
             </div>
           </div>
-          <div className="flex mt-5 flex-col h-full justify-items-end items-end ">
+          {/* <div className="flex mt-5 flex-col h-full justify-items-end items-end "> */}
+
+          <div className="place-self-end [bottom:20px] [right:20px] absolute">
             <CardButton btnLabel="view in detail" />
           </div>
         </div>
