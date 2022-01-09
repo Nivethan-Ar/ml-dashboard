@@ -6,6 +6,8 @@ import Login from './pages/login/Login';
 import PrivateRoute from './routes/PrivateRoute';
 import SetLocalStorage from './pages/login/SetLocalStorage';
 import PublicRoute from './routes/PublicRoute';
+import Sub1 from './pages/Manage/sub1/Sub1';
+import Sub2 from './pages/Manage/sub2/Sub1';
 
 const App = () => (
   <div>
@@ -20,6 +22,8 @@ const App = () => (
       <Route path="/" element={<PrivateRoute />}>
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="manage" element={<Manage />} />
+        <Route path="sub1" element={<Sub1 />} />
+        <Route path="sub2" element={<Sub2 />} />
       </Route>
 
       <Route path="/setlocalstorage" element={<SetLocalStorage />} />
