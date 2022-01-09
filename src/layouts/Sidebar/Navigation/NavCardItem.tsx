@@ -11,7 +11,7 @@ const NavCardItem = (props:any) => {
     <li>
       <Link to={link}>
         <div
-          className="bg-[#152042] rounded-xl pl-5 pt-4 pb-2 mx-2 shadow-lg shadow-violet-600/30 hover:shadow-violet-600/70 text-white"
+          className="bg-[#152042] fixed top-20 group-hover:block hidden rounded-xl pl-5 pt-4 pb-2 mx-2 shadow-lg shadow-violet-600/30 hover:shadow-violet-600/70 text-white"
         >
           <div className="">
             <CardButton btnLabel="ALL NEW" />
