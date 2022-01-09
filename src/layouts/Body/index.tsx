@@ -5,7 +5,7 @@ const Body = ({ children }:any) => (
   <div>
     <div className="flex">
       <Sidebar />
-      <div>
+      <div className="ml-16">
         {children}
       </div>
     </div>
