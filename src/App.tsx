@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-useless-fragment */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Dashboard from './pages/DashboardML/Dashboard';
@@ -22,8 +23,10 @@ const App = () => (
       <Route path="/" element={<PrivateRoute />}>
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="manage" element={<Manage />} />
-        <Route path="sub1" element={<Sub1 />} />
+        {/* <Route index element={<Manage />} /> */}
+        <Route path="manage/sub1" element={<Sub1 />} />
         <Route path="sub2" element={<Sub2 />} />
+
       </Route>
 
       <Route path="/setlocalstorage" element={<SetLocalStorage />} />

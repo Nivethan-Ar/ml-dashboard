@@ -28,8 +28,8 @@ const Navigation = () => {
           <NavItem link="/dashboard" icon={DashboardIcon} label="Home" />
           <NavItem link="/manage" icon={HappinessIcon} label="Manage" hasSubItem>
             <div>
-              <NavSubItem link="/sub1" label="Sub Item 1" />
-              <NavSubItem link="/sub2" label="Sub Item 2" />
+              <NavSubItem link="/manage/sub1" label="Sub Item 1" />
+              <NavSubItem link="/manage/sub2" label="Sub Item 2" />
               <NavSubItem link="sub2" label="Sub Item 3" />
               <NavSubItem link="sub2" label="Sub Item 4" />
               <NavSubItem link="sub2" label="Sub Item 5" />
