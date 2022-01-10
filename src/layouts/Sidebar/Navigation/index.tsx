@@ -23,17 +23,15 @@ const Navigation = () => {
   return (
     <>
       {/* <NavCardItem link="/dashboard" /> */}
-      <nav className="text-gray-500 fixed top-40">
+      <nav className="text-gray-500 fixed top-40 group-hover:w-56">
         <ul className="flex flex-col gap-8 ">
           <NavItem link="/dashboard" icon={DashboardIcon} label="Home" />
           <NavItem link="/manage" icon={HappinessIcon} label="Manage" hasSubItem>
-            <div>
-              <NavSubItem link="/manage/sub1" label="Sub Item 1" />
-              <NavSubItem link="/manage/sub2" label="Sub Item 2" />
-              <NavSubItem link="sub2" label="Sub Item 3" />
-              <NavSubItem link="sub2" label="Sub Item 4" />
-              <NavSubItem link="sub2" label="Sub Item 5" />
-            </div>
+            <NavSubItem link="/manage/sub1" label="Sub Item 1" />
+            <NavSubItem link="/manage/sub2" label="Sub Item 2" />
+            <NavSubItem link="sub2" label="Sub Item 3" />
+            <NavSubItem link="sub2" label="Sub Item 4" />
+            <NavSubItem link="sub2" label="Sub Item 5" />
           </NavItem>
           <NavItem link="/" icon={OrderManageIcon} label="Products" hasSubItem>
             <div>
