@@ -7,6 +7,7 @@ const NavItem = (props:any) => {
   const {
     icon, label, link, children, hasSubItem,
   } = props;
+
   const [subNavShow, setSubNavShow] = useState(false);
 
   const onMouseEnter = () => {
@@ -23,14 +24,22 @@ const NavItem = (props:any) => {
         to={link}
         className={({ isActive }) => (isActive ? 'text-white font-semibold' : '')}
       >
-        <div className="flex pl-6 items-center" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+        <div
+          className="flex pl-6 items-center"
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+        >
           <img className="w-5 mr-2" src={icon} alt="navigation icon" />
           <span className="text-sm hidden group-hover:block ">{label}</span>
           {/* <img src={arrowIcon} className="w-2 hidden group-hover:block" alt="" /> */}
         </div>
       </NavLink>
       {subNavShow && hasSubItem && (
-        <ul className=" absolute left-32 w-max px-2 py-1 top-0 rounded-md bg-gray-300 " onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+        <ul
+          className="absolute left-56 ml-1 w-max px-8 py-4 space-y-4 text-sm top-0 rounded-md bg-gray-300 "
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+        >
           {children}
         </ul>
       )}
