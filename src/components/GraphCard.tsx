@@ -4,17 +4,20 @@ import CardButton from './CardButton';
 
 /* eslint-disable max-len */
 interface Props{
-  GraphComp: React.ElementType;
-  h1Type: 1 | 2;
-  h2?:string;
+  GraphComp: React.ElementType
+  h1Type: 1 | 2
+  h2?:string
+  colSpan:string
 }
 
 const GraphCard:React.FC<Props> = (props) => {
-  const { GraphComp, h1Type, h2 } = props;
+  const {
+    GraphComp, h1Type, h2, colSpan,
+  } = props;
 
   return (
     <div
-      className="bg-[#10172d] grid flex-shrink-0 tracking-wide rounded-lg w-64 relative"
+      className={`bg-[#10172d] grid flex-shrink-0 tracking-wide rounded-lg ${colSpan} relative`}
     >
       <div className="px-4 pt-4">
         <div className="text-sm">
@@ -36,8 +39,9 @@ const GraphCard:React.FC<Props> = (props) => {
         </div>
         <h6 className="font-medium">{h2}</h6>
       </div>
-
-      <GraphComp />
+      <div className="self-end">
+        <GraphComp />
+      </div>
 
       <div className="place-self-end [bottom:20px] [right:20px] absolute">
         <CardButton btnLabel="view in detail" />

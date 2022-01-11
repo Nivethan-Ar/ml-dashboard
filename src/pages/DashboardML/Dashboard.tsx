@@ -9,6 +9,7 @@ import GraphCard from '../../components/GraphCard';
 
 import WaveIcon_2 from './wave-2.svg';
 import WaveIcon from './wave.svg';
+import Productivity from './Productivity';
 
 const Dashboard = () => (
   <Body>
@@ -28,8 +29,8 @@ const Dashboard = () => (
           <h6 className="[background-image:linear-gradient(60deg,#89cff2,#ce5efa)] [background-clip:text] [color:transparent] font-semibold text-2xl">
             AI Dashboard
           </h6>
-          <div className="flex justify-center items-baseline gap-1">
-            <p className="text-[12px] font-medium">
+          <div className="flex justify-center text-blue-400 items-baseline gap-1">
+            <p className="text-base font-medium">
               This Week
             </p>
             <p>
@@ -45,55 +46,7 @@ const Dashboard = () => (
       </div>
 
       {/* CARDS */}
-      <main className="flex flex-wrap gap-8 ">
-
-        <div className="grid relative flex-shrink-0 grid-cols-2  gap-2 w-fit p-6 tracking-wide bg-[#10172d] h-fit rounded-lg">
-          <div>
-            <h6 className="text-xs">This Week&apos;s</h6>
-            <h6 className="font-medium">Productivity Score</h6>
-          </div>
-          <div className="text-xs font-light">
-            <p className="text-red-600"> -25 than expected</p>
-            <p className="text-green-600"> +10 than last week</p>
-          </div>
-          <div className="text-7xl font-semibold">33</div>
-          <div className="text-xs font-light">
-            <p>Less than average productive visits</p>
-            <p>Less than average lead times</p>
-            <p>More than average task completion</p>
-            <p>Average active hours</p>
-          </div>
-          <div className="flex gap-2">
-            <div className="flex flex-col items-baseline">
-              <h6 className="text-xs">Next Week&apos;s</h6>
-              <h6 className="font-medium">Highest Achievable</h6>
-            </div>
-            <div className="text-4xl font-semibold self-end">
-              70
-            </div>
-          </div>
-          {/* <div className="flex mt-5 flex-col h-full justify-items-end items-end "> */}
-
-          <div className="place-self-end [bottom:20px] [right:20px] absolute">
-            <CardButton btnLabel="view in detail" />
-          </div>
-        </div>
-
-        {/* Reusable cards */}
-
-        <GraphCard
-          GraphComp={ProductivityGraph}
-          h1Type={1}
-          h2="Productivity"
-        />
-
-        <GraphCard
-          GraphComp={productiveVisitsGraph}
-          h1Type={2}
-          h2="Productive Visits"
-        />
-
-      </main>
+      <Productivity />
 
     </div>
   </Body>

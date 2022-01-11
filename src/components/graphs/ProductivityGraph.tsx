@@ -140,7 +140,7 @@ const ProductivityGraph = () => {
   };
   return (
     <div className="">
-      <ReactApexChart options={options} series={options.series} type="area" width="100%" />
+      <ReactApexChart options={options} series={options.series} type="area" height="117%" width="100%" />
     </div>
   );
 };
