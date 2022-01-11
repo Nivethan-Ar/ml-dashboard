@@ -23,9 +23,11 @@ const Dashboard = () => (
       <TopBar />
 
       {/* TITLE */}
-      <div className="">
-        <div className="flex items-baseline gap-4">
-          <h6 className="[background-image:linear-gradient(60deg,#89cff2,#ce5efa)] [background-clip:text] [color:transparent] font-semibold text-2xl">AI Dashboard</h6>
+      <div className="flex justify-between">
+        <div className="flex flex-col items-baseline gap-2">
+          <h6 className="[background-image:linear-gradient(60deg,#89cff2,#ce5efa)] [background-clip:text] [color:transparent] font-semibold text-2xl">
+            AI Dashboard
+          </h6>
           <div className="flex justify-center items-baseline gap-1">
             <p className="text-[12px] font-medium">
               This Week
@@ -34,6 +36,11 @@ const Dashboard = () => (
               <span>&#8964;</span>
             </p>
           </div>
+        </div>
+        <div className="flex gap-0 h-10 border-b border-gray-600  text-gray-300 ">
+          <h6 className="hover:border-b-4 h-[41px] px-6 border-current hover:text-cyan-300 hover:font-medium">Productivity</h6>
+          <h6 className="hover:border-b-4 h-[41px] px-6 border-b-0 border-current hover:text-cyan-300 hover:font-medium">Incentives</h6>
+          <h6 className="hover:border-b-4 h-[41px] px-6 border-current hover:text-cyan-300 hover:font-medium">Developement</h6>
         </div>
       </div>
 
