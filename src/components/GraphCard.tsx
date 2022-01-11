@@ -25,19 +25,19 @@ const GraphCard:React.FC<Props> = (props) => {
               h1Type === 1
                 ? (
                   <h6>
-                    <span className="text-blue-400">Estimated </span>
+                    <span className="text-blue-400 font-semibold">Estimated </span>
                     <span>vs</span>
-                    <span className="text-green-400"> Achieved</span>
+                    <span className="text-green-400 font-semibold"> Achieved</span>
                   </h6>
                 ) : (
                   <h6>
-                    <span className="">Number of </span>
+                    <span className=" font-semibold">Number of </span>
                   </h6>
                 )
           }
 
         </div>
-        <h6 className="font-medium">{h2}</h6>
+        <h6 className="font-semibold text-lg">{h2}</h6>
       </div>
       <div className="self-end">
         <GraphComp />
