@@ -1,15 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable max-len */
-import CardButton from '../../components/CardButton';
+import { Outlet } from 'react-router-dom';
 import Body from '../../layouts/Body';
 import TopBar from '../../components/TopBar';
-import ProductivityGraph from '../../components/graphs/ProductivityGraph';
-import productiveVisitsGraph from '../../components/graphs/productiveVisitsGraph';
-import GraphCard from '../../components/GraphCard';
-
-import WaveIcon_2 from './wave-2.svg';
-import WaveIcon from './wave.svg';
-import Productivity from './Productivity';
+import TabLink from '../../components/TabLink';
 
 const Dashboard = () => (
   <Body>
@@ -38,15 +32,29 @@ const Dashboard = () => (
             </p>
           </div>
         </div>
+
         <div className="flex gap-0 h-10 border-b border-gray-600  text-gray-300 ">
-          <h6 className="hover:border-b-4 h-[41px] px-6 border-current hover:text-cyan-300 hover:font-medium">Productivity</h6>
-          <h6 className="hover:border-b-4 h-[41px] px-6 border-b-0 border-current hover:text-cyan-300 hover:font-medium">Incentives</h6>
-          <h6 className="hover:border-b-4 h-[41px] px-6 border-current hover:text-cyan-300 hover:font-medium">Developement</h6>
+          <TabLink
+            link="/dashboard"
+            label="Productivity"
+          />
+
+          <TabLink
+            link="/dashboard/incentives"
+            label="Incentives"
+          />
+
+          <TabLink
+            link="/dashboard/development"
+            label="Development"
+          />
         </div>
+
       </div>
 
       {/* CARDS */}
-      <Productivity />
+      {/* <Productivity /> */}
+      <Outlet />
 
     </div>
   </Body>
