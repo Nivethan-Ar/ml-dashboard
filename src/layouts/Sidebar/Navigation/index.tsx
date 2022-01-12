@@ -14,7 +14,7 @@ import MessageIcon from '../../../assets/icons/nav/latest/message.png';
 const Navigation = () => (
   <>
     {/* <NavCardItem link="/dashboard" /> */}
-    <nav className="text-gray-500 fixed top-40 group-hover:w-60">
+    <nav className="text-gray-500 fixed lg:top-32 2xl:top-52 group-hover:w-60">
       <ul className="flex flex-col ">
         <NavItem
           link="/dashboard"
