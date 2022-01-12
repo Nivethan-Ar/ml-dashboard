@@ -23,9 +23,15 @@ code {
 }
 
 /* Vertical scroll bar stylings */
+:root{
+  /* firefox only support these two values for scrollbar */
+  scrollbar-color: #1a4675 #132138 !important;
+  scrollbar-width: auto !important;
+}
 
+  /* scrollbar stylings for most other browsers like chrome,brave except firefox  */
 ::-webkit-scrollbar {
-	width: 14px;
+	width: 12px;
 }
 
 ::-webkit-scrollbar-track {

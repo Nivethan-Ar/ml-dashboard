@@ -12,7 +12,7 @@ const Dashboard = () => (
         backgroundColor: '#7f53ac',
         backgroundImage: 'linear-gradient(315deg, #191d36 0%, #0f263e 64%)',
       }}
-      className="h-[140vh] flex flex-col gap-6 px-8 py-4 overflow-hidden w-[calc(100vw_-_(4rem_+_14px))] text-white "
+      className="h-[140vh] flex flex-col gap-6 px-8 py-4 overflow-hidden w-[calc(100vw_-_(4rem_+_12px))] text-white "
     >
       {/* TOP BAR */}
       <TopBar />
