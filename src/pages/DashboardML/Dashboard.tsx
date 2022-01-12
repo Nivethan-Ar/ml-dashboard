@@ -7,20 +7,15 @@ import TabLink from '../../components/TabLink';
 
 const Dashboard = () => (
   <Body>
-    <div
-      style={{
-        backgroundColor: '#7f53ac',
-        backgroundImage: 'linear-gradient(315deg, #191d36 0%, #0f263e 64%)',
-      }}
-      className="h-[140vh] flex flex-col gap-6 px-8 py-4 overflow-hidden w-[calc(100vw_-_(4rem_+_12px))] text-white "
-    >
+    <div className="flex flex-col gap-6 px-8 py-4">
       {/* TOP BAR */}
       <TopBar />
 
-      {/* TITLE */}
       <div className="flex justify-between">
+
+        {/* TITLE */}
         <div className="flex flex-col items-baseline gap-2">
-          <h6 className="[background-image:linear-gradient(60deg,#89cff2,#ce5efa)] [background-clip:text] [color:transparent] font-semibold text-2xl">
+          <h6 className="[background-image:linear-gradient(60deg,#89cff2,#ce5efa)] bg-clip-text text-transparent font-semibold text-2xl">
             AI Dashboard
           </h6>
           <div className="flex justify-center text-blue-400 items-baseline gap-1">
@@ -33,6 +28,7 @@ const Dashboard = () => (
           </div>
         </div>
 
+        {/* 3 Tabs on top left corner */}
         <div className="flex gap-0 h-10 border-b border-gray-600  text-gray-300 ">
           <TabLink
             link="/dashboard"
@@ -52,8 +48,6 @@ const Dashboard = () => (
 
       </div>
 
-      {/* CARDS */}
-      {/* <Productivity /> */}
       <Outlet />
 
     </div>
