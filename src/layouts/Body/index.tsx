@@ -10,7 +10,7 @@ const Body = ({ children }:any) => (
           backgroundColor: '#7f53ac',
           backgroundImage: 'linear-gradient(315deg, #191d36 0%, #0f263e 64%)',
         }}
-        className="ml-16 h-[120vh] text-white w-[calc(100vw_-_(4rem_+_12px))]"
+        className="ml-16 h-[160vh] text-white w-[calc(100vw_-_(4rem_+_12px))]"
       >
         {children}
       </div>
