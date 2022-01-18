@@ -17,25 +17,25 @@ const Incentives = () => {
       agentName: 'Barrows Michel',
       target: '38,415 LKR',
       achievement: '38,415 LKR',
-      suggTarget: '38,415 LKR',
-      suggIncentive: '510.50 LKR',
-      pSalesImpact: '+20%',
+      suggestedTarget: '38,415 LKR',
+      suggestedIncentive: '510.50 LKR',
+      predictedSalesImpact: '+20%',
     },
     {
       agentName: 'Osinski Willow',
       target: '19,962 LKR',
       achievement: '19,962 LKR',
-      suggTarget: '19,962 LKR',
-      suggIncentive: '510.50 LKR',
-      pSalesImpact: '+1.5%',
+      suggestedTarget: '19,962 LKR',
+      suggestedIncentive: '510.50 LKR',
+      predictedSalesImpact: '+1.5%',
     },
     {
       agentName: 'Gerhold Emmy',
       target: '12,532 LKR',
       achievement: '12,532 LKR',
-      suggTarget: '12,532 LKR',
-      suggIncentive: '510.50 LKR',
-      pSalesImpact: '+44%',
+      suggestedTarget: '12,532 LKR',
+      suggestedIncentive: '510.50 LKR',
+      predictedSalesImpact: '+44%',
     },
   ];
 
@@ -44,9 +44,9 @@ const Incentives = () => {
       <div className=""><h6>{d.agentName}</h6></div>
       <div className=""><h6>{d.target}</h6></div>
       <div className=""><h6>{d.achievement}</h6></div>
-      <div className=""><h6>{d.suggTarget}</h6></div>
-      <div className=""><h6>{d.suggIncentive}</h6></div>
-      <div className="text-green-400 "><h6>{d.pSalesImpact}</h6></div>
+      <div className=""><h6>{d.suggestedTarget}</h6></div>
+      <div className=""><h6>{d.suggestedIncentive}</h6></div>
+      <div className="text-green-400 "><h6>{d.predictedSalesImpact}</h6></div>
       <button
         type="button"
         className="border border-rose-500 rounded-md px-4 py-2 font-bold text-[0.55rem] text-red-600"
