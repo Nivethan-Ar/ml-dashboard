@@ -31,19 +31,19 @@ const Dashboard = () => (
         {/* 3 Tabs on top left corner */}
         <div className="flex gap-0 h-10 border-b border-gray-600  text-gray-300 ">
           <TabLink
-            link="/dashboard"
+            link="/"
             label="Productivity"
           />
 
           <TabLink
-            link="/dashboard/incentives"
+            link="/incentives"
             label="Incentives"
           />
 
-          <TabLink
-            link="/dashboard/development"
+          {/* <TabLink
+            link="/development"
             label="Development"
-          />
+          /> */}
         </div>
 
       </div>
