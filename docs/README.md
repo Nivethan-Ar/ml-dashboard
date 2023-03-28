@@ -34,7 +34,8 @@ redux is used to maintain the 2 important states of the sidebar to make this ext
 
 the above two states handled by the sidebarSlice with openSidebar and closeSidebar reducers. so the main idea is to dispatch the openSidebar onMouseEnter and closeSidebar onMouseLeave
 
- `Add video here`
+
+[ml-sidebar.webm](https://user-images.githubusercontent.com/63112138/228153836-e690dd73-c502-4fa2-b1af-b3faca361c46.webm)
 
 
 
